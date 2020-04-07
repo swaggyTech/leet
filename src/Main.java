@@ -26,5 +26,9 @@ public class Main {
             System.out.println(ret.val);
             ret = ret.next;
         }
+
+        //3.lengthOfLongestSubstring
+        String s = "au";
+        System.out.println("第三题"+Solution1to10.lengthOfLongestSubstring(s));
     }
 }

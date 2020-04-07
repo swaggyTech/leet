@@ -1,5 +1,7 @@
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * @author Paul
@@ -104,4 +106,90 @@ public class Solution1to10 {
         }
         return ret.next;
     }
+
+    /**
+     * 3.无重复字符最长子串 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
+     *
+     * 示例 1:
+     *
+     * 输入: "abcabcbb"
+     * 输出: 3
+     * 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
+     * 示例 2:
+     *
+     * 输入: "bbbbb"
+     * 输出: 1
+     * 解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
+     * 示例 3:
+     *
+     * 输入: "pwwkew"
+     * 输出: 3
+     * 解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
+     *      请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
+     */
+    public static int lengthOfLongestSubstring(String s){
+        if("".equals(s)){
+            return 0;
+        }
+        if(s.trim().length() == 0) {
+            return 1;
+        }
+        if(s.length() == 1){
+            return 1;
+        }
+        int ret = 0;
+        for(int i = 0;i < s.length() - 1;i++){
+            Set<Character> set = new HashSet<>();
+            char start = s.charAt(i);
+            set.add(start);
+            int tmp = 1;
+            for(int j = i + 1;j < s.length();j++){
+                char end = s.charAt(j);
+                if(set.contains(end)){
+                    ret = Math.max(ret,tmp);
+                    break;
+                }else{
+                    set.add(end);
+                    tmp++;
+                    ret = Math.max(ret,tmp);
+                }
+            }
+        }
+        return ret;
+    }
+    public static int lengthOfLongestSubstring1(String s) {
+        Map<Character,Integer> map = new HashMap<>((int)Math.ceil(s.length() * 5 / 4.0));
+        int ans = 0;
+        for(int i = 0,j = 0;j < s.length(); j ++){
+            if(map.containsKey(s.charAt(j))){
+                i = Math.max(map.get(s.charAt(j)),i);
+            }
+            ans = Math.max(ans,j - i + 1);
+            map.put(s.charAt(j),j + 1);
+        }
+        return ans;
+    }
+
+    /**
+     * 4. 寻找两个有序数组的中位数 给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。
+     *
+     * 请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
+     *
+     * 你可以假设 nums1 和 nums2 不会同时为空。
+     *
+     * 示例 1:
+     *
+     * nums1 = [1, 3]
+     * nums2 = [2]
+     *
+     * 则中位数是 2.0
+     * 示例 2:
+     *
+     * nums1 = [1, 2]
+     * nums2 = [3, 4]
+     *
+     * 则中位数是 (2 + 3)/2 = 2.5
+     */
+
+
 }
