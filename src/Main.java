@@ -30,5 +30,10 @@ public class Main {
         //3.lengthOfLongestSubstring
         String s = "au";
         System.out.println("第三题"+Solution1to10.lengthOfLongestSubstring(s));
+
+        //4.findMedianSortedArray
+        int[] nums1 = {1,3};
+        int[] nums2 = {2};
+        System.out.println("第四题"+Solution1to10.findMedianSortedArray(nums1,nums2));
     }
 }

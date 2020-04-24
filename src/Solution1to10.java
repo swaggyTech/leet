@@ -190,6 +190,36 @@ public class Solution1to10 {
      *
      * 则中位数是 (2 + 3)/2 = 2.5
      */
+    public static double findMedianSortedArray(int[] nums1,int[] nums2){
+        int len1 = nums1.length,len2 = nums2.length;
+        int[] nums = new int[len1 + len2];
+        int l1 = 0,l2 = 0;
+        int l = 0;
+
+        while(l1 < nums1.length && l2 < nums2.length){
+            if(nums1[l1] < nums2[l2]){
+                nums[l++] = nums1[l1++];
+            }else{
+                nums[l++] = nums2[l2++];
+            }
+        }
+        if(l1 == nums1.length){
+            while(l < nums.length){
+                nums[l++] = nums2[l2++];
+            }
+        }
+        if(l2 == nums2.length){
+            while(l < nums.length){
+                nums[l++] = nums1[l1++];
+            }
+        }
+        if(nums.length % 2 == 0){
+            return (double) (nums[nums.length / 2 - 1] + nums[nums.length / 2]) / 2;
+        }else{
+            return (double)nums[nums.length / 2] / 1.0;
+        }
+
+    }
 
 
 }
