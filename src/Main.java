@@ -35,5 +35,9 @@ public class Main {
         int[] nums1 = {1,3};
         int[] nums2 = {2};
         System.out.println("第四题"+Solution1to10.findMedianSortedArray(nums1,nums2));
+
+        //5.longestPalindrome
+        String s4 = "babad";
+        System.out.println("第五题"+Solution1to10.longestPalindrome(s4));
     }
 }
