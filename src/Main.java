@@ -43,5 +43,9 @@ public class Main {
         //6.convert
         String s6 = "akapualakapaulakapaul";
         System.out.println("第六题"+Solution1to10.convert(s6,3));
+
+        //7.reverse
+        int x7 = 321;
+        System.out.println("第七题" + Solution1to10.reverse(x7));
     }
 }
