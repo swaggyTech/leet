@@ -39,5 +39,9 @@ public class Main {
         //5.longestPalindrome
         String s4 = "babad";
         System.out.println("第五题"+Solution1to10.longestPalindrome(s4));
+
+        //6.convert
+        String s6 = "akapualakapaulakapaul";
+        System.out.println("第六题"+Solution1to10.convert(s6,3));
     }
 }
