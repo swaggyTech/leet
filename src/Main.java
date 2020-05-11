@@ -47,5 +47,20 @@ public class Main {
         //7.reverse
         int x7 = 321;
         System.out.println("第七题" + Solution1to10.reverse(x7));
+
+        //8.atoi
+        /**String str1 = "42";
+        String str2 = "    -42";
+        String str3 = "4193 with words";
+        String str4 = "words and 987";
+        String str5 = "-91283472332";
+        System.out.println("str1 " + Solution1to10.myAtoi(str1));
+        System.out.println("str2 " + Solution1to10.myAtoi(str2));
+        System.out.println("str3 " + Solution1to10.myAtoi(str3));
+        System.out.println("str4 " + Solution1to10.myAtoi(str4));
+        System.out.println("str5 " + Solution1to10.myAtoi(str5));*/
+        String str5 = "2147483646";
+        System.out.println("str5 " + Solution1to10.myAtoi(str5));
+
     }
 }
