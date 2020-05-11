@@ -62,5 +62,8 @@ public class Main {
         String str5 = "2147483646";
         System.out.println("str5 " + Solution1to10.myAtoi(str5));
 
+        //9.回文数
+        int x = 121;
+        System.out.println("第9题 " + Solution1to10.isPalindrome(x));
     }
 }
