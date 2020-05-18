@@ -65,5 +65,10 @@ public class Main {
         //9.回文数
         int x = 121;
         System.out.println("第9题 " + Solution1to10.isPalindrome(x));
+
+        //11.盛水最多的容器
+        int[] height = {1,8,6,2,5,4,8,3,7};
+        System.out.println("第11题" + Solution11to20.maxArea(height));
+        System.out.println("第11题" + Solution11to20.maxArea1(height));
     }
 }
