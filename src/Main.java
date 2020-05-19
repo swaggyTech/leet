@@ -74,5 +74,9 @@ public class Main {
         //12.数字转罗马数字[贪心算法]
         int num = 3;
         System.out.println("第12题" + Solution11to20.intToRoman(num));
+
+        //13.罗马数字转整数
+        String s13 = "MCMXCIV";
+        System.out.println("第13题" + Solution11to20.romanToInt(s13));
     }
 }
