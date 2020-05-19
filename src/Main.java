@@ -78,5 +78,9 @@ public class Main {
         //13.罗马数字转整数
         String s13 = "MCMXCIV";
         System.out.println("第13题" + Solution11to20.romanToInt(s13));
+
+        //14.最长公共前缀
+        String[] strs = {"flower","flow","flight"};
+        System.out.println("第14题" + Solution11to20.longestCommonPrefix(strs));
     }
 }
