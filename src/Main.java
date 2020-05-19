@@ -70,5 +70,9 @@ public class Main {
         int[] height = {1,8,6,2,5,4,8,3,7};
         System.out.println("第11题" + Solution11to20.maxArea(height));
         System.out.println("第11题" + Solution11to20.maxArea1(height));
+
+        //12.数字转罗马数字[贪心算法]
+        int num = 3;
+        System.out.println("第12题" + Solution11to20.intToRoman(num));
     }
 }
