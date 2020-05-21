@@ -80,7 +80,11 @@ public class Main {
         System.out.println("第13题" + Solution11to20.romanToInt(s13));
 
         //14.最长公共前缀
-        String[] strs = {"flower","flow","flight"};
+        String[] strs = {"flower", "flow", "flight"};
         System.out.println("第14题" + Solution11to20.longestCommonPrefix(strs));
+
+        //15.三数之和
+        int[] nums15 = {-1, 0, 1, 2, -1, -4};
+        System.out.println("第15题" + Solution11to20.threeSum(nums15));
     }
 }
