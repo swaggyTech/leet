@@ -86,5 +86,11 @@ public class Main {
         //15.三数之和
         int[] nums15 = {-1, 0, 1, 2, -1, -4};
         System.out.println("第15题" + Solution11to20.threeSum(nums15));
+
+        //16.最接近的三数之和
+        int[] nums16 = {1, 1, 1, 0};
+        int target16 = -100;
+        System.out.println("第16题" + Solution11to20.threeSumClosest(nums16, target16));
+
     }
 }
