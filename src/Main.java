@@ -96,5 +96,9 @@ public class Main {
         String digits = "23";
         System.out.println("第17题" + Solution11to20.letterCombination(digits));
 
+        //18.四数之和
+        int[] nums18 = {1, 0, -1, 0, -2, 2};
+        int target18 = 0;
+        System.out.println("第18题" + Solution11to20.fourSum(nums18, target18));
     }
 }
